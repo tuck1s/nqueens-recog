@@ -2,7 +2,7 @@
 
 This note records the two Y-Wing deductions proposed in [issue #4](https://github.com/tuck1s/nqueens-recog/issues/4), together with the implementation details used by the stepwise solver.
 
-Let `R` be a selected set of rows, `C` a selected set of columns, and `I = R ∩ C` their crossing cells. Every row and column must receive one queen, so the number of queens in their union is:
+Let `R` be a selected set of rows, `C` a selected set of columns, and `I = R × C` their crossing cells. Every row and column must receive one queen, so the number of queens in their union is:
 
 $$
 |Q(R \cup C)| = |R| + |C| - |Q(I)|.
