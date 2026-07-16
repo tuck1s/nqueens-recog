@@ -716,13 +716,17 @@ union_colours = {
                         if len(union_colours) != target:
                             continue
 
-                        elim_cells = {
-                            (r2, c2)
-                            for r2 in range(n) for c2 in range(n)
-                            if candidates[r2][c2]
-                            and (r2 in row_set or c2 in col_set)
-                            and board[r2][c2] not in union_colours
-                        }
+elim_cells = {
+    (r2, c2)
+    for r2 in row_set
+    for c2 in range(n)
+    if candidates[r2][c2] and board[r2][c2] not in union_colours
+} | {
+    (r2, c2)
+    for c2 in col_set
+    for r2 in range(n)
+    if candidates[r2][c2] and board[r2][c2] not in union_colours
+}
                         if not elim_cells:
                             continue
                         for r2, c2 in elim_cells:
