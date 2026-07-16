@@ -628,13 +628,17 @@ def solve_stepwise(
                     row_set = set(row_group)
                     for col_group in combinations(free_cols, b):
                         col_set = set(col_group)
-                        union_colours = {
-                            board[r2][c2]
-                            for r2 in range(n)
-                            for c2 in range(n)
-                            if candidates[r2][c2]
-                            and (r2 in row_set or c2 in col_set)
-                        }
+union_colours = {
+    board[r2][c2]
+    for r2 in row_set
+    for c2 in range(n)
+    if candidates[r2][c2]
+} | {
+    board[r2][c2]
+    for c2 in col_set
+    for r2 in range(n)
+    if candidates[r2][c2]
+}
                         # Every candidate in the union must belong to one of
                         # the k colours; a non-positive bound is ordinary
                         # X-Wing territory rather than a forced intersection.
