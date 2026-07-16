@@ -59,11 +59,11 @@ Grid: 7 × 7, 7 colours. Top left is shown as (R1,C1)
 0.0s:     x-wing scan: size 4 → 0 hit(s) after 35 group(s)
 0.0s:     x-wing scan: size 5 → 0 hit(s) after 21 group(s)
 0.0s:     x-wing scan: size 6 → 0 hit(s) after 7 group(s)
-0.0s:   lookahead [C] (2 candidates):
-0.0s:     try (R6,C6) → E(R2,C2), G(R4,C4), A(R3,C7), F(R5,C1), B(R7,C3), D(R1,C5) → ok
-0.0s:     try (R7,C6) → ✗ eliminated
-0.0s:       try (R5,C5) [B] → G(R1,C3), D(R3,C4) → col C2 empty ✗
-0.0s:       try (R6,C4) [B] → G(R1,C3) → [F] empty ✗
+0.1s:   lookahead [C] (2 candidates):
+0.1s:     try (R6,C6) → E(R2,C2), G(R4,C4), A(R3,C7), F(R5,C1), B(R7,C3), D(R1,C5) → ok
+0.1s:     try (R7,C6) → ✗ eliminated
+0.1s:       try (R5,C5) [B] → G(R1,C3), D(R3,C4) → col C2 empty ✗
+0.1s:       try (R6,C4) [B] → G(R1,C3) → [F] empty ✗
 <span style="background-color:#6c7a89;">  E </span><span style="background-color:#5e4fa2;">  ✖ </span><span style="background-color:#e6f598;">  G </span><span style="background-color:#acdda5;">  ✖ </span><span style="background-color:#acdda5;">  D </span><span style="background-color:#acdda5;">  ✖ </span><span style="background-color:#5e4fa2;">  A </span>
 <span style="background-color:#6c7a89;">  E </span><span style="background-color:#6c7a89;">  E </span><span style="background-color:#5e4fa2;">  ✖ </span><span style="background-color:#acdda5;">  ✖ </span><span style="background-color:#acdda5;">  D </span><span style="background-color:#acdda5;">  ✖ </span><span style="background-color:#5e4fa2;">  A </span>
 <span style="background-color:#6c7a89;">  E </span><span style="background-color:#acdda5;">  D </span><span style="background-color:#acdda5;">  ✖ </span><span style="background-color:#acdda5;">  D </span><span style="background-color:#acdda5;">  D </span><span style="background-color:#e6f598;">  ✖ </span><span style="background-color:#5e4fa2;">  A </span>
@@ -72,7 +72,7 @@ Grid: 7 × 7, 7 colours. Top left is shown as (R1,C1)
 <span style="background-color:#d53e4f;">  F </span><span style="background-color:#acdda5;">  D </span><span style="background-color:#d53e4f;">  F </span><span style="background-color:#fdae61;">  B </span><span style="background-color:#fdae61;">  ✖ </span><span style="background-color:#3287bd;">  C </span><span style="background-color:#5e4fa2;">  ✖ </span>
 <span style="background-color:#d53e4f;">  F </span><span style="background-color:#acdda5;">  D </span><span style="background-color:#fdae61;">  B </span><span style="background-color:#fdae61;">  B </span><span style="background-color:#6c7a89;">  ✖ </span><span style="background-color:#3287bd;"> ❌ </span><span style="background-color:#6c7a89;">  ✖ </span>
 
-0.0s:   QUEEN (R6,C6) [C]: region singleton [C]: eliminating row R6, col C6, region [C], diagonal adjacents → 6 cell(s)
+0.1s:   QUEEN (R6,C6) [C]: region singleton [C]: eliminating row R6, col C6, region [C], diagonal adjacents → 6 cell(s)
 <span style="background-color:#6c7a89;">  E </span><span style="background-color:#5e4fa2;">  ✖ </span><span style="background-color:#e6f598;">  G </span><span style="background-color:#acdda5;">  ✖ </span><span style="background-color:#acdda5;">  D </span><span style="background-color:#acdda5;">  ✖ </span><span style="background-color:#5e4fa2;">  A </span>
 <span style="background-color:#6c7a89;">  E </span><span style="background-color:#6c7a89;">  E </span><span style="background-color:#5e4fa2;">  ✖ </span><span style="background-color:#acdda5;">  ✖ </span><span style="background-color:#acdda5;">  D </span><span style="background-color:#acdda5;">  ✖ </span><span style="background-color:#5e4fa2;">  A </span>
 <span style="background-color:#6c7a89;">  E </span><span style="background-color:#acdda5;">  D </span><span style="background-color:#acdda5;">  ✖ </span><span style="background-color:#acdda5;">  D </span><span style="background-color:#acdda5;">  D </span><span style="background-color:#e6f598;">  ✖ </span><span style="background-color:#5e4fa2;">  A </span>
@@ -81,8 +81,8 @@ Grid: 7 × 7, 7 colours. Top left is shown as (R1,C1)
 <span style="background-color:#d53e4f;"> ❌ </span><span style="background-color:#acdda5;"> ❌ </span><span style="background-color:#d53e4f;"> ❌ </span><span style="background-color:#fdae61;"> ❌ </span><span style="background-color:#fdae61;">  ✖ </span><span style="background-color:#3287bd;"> 👑 </span><span style="background-color:#5e4fa2;">  ✖ </span>
 <span style="background-color:#d53e4f;">  F </span><span style="background-color:#acdda5;">  D </span><span style="background-color:#fdae61;">  B </span><span style="background-color:#fdae61;">  B </span><span style="background-color:#6c7a89;">  ✖ </span><span style="background-color:#3287bd;">  ✖ </span><span style="background-color:#6c7a89;">  ✖ </span>
 
-0.0s:   forced: [B] confined to row R7 → 2 cell(s) eliminated
-0.0s:   forced: [F] confined to col C1 → 3 cell(s) eliminated
+0.1s:   forced: [B] confined to row R7 → 2 cell(s) eliminated
+0.1s:   forced: [F] confined to col C1 → 3 cell(s) eliminated
 <span style="background-color:#6c7a89;"> ❌ </span><span style="background-color:#5e4fa2;">  ✖ </span><span style="background-color:#e6f598;">  G </span><span style="background-color:#acdda5;">  ✖ </span><span style="background-color:#acdda5;">  D </span><span style="background-color:#acdda5;">  ✖ </span><span style="background-color:#5e4fa2;">  A </span>
 <span style="background-color:#6c7a89;"> ❌ </span><span style="background-color:#6c7a89;">  E </span><span style="background-color:#5e4fa2;">  ✖ </span><span style="background-color:#acdda5;">  ✖ </span><span style="background-color:#acdda5;">  D </span><span style="background-color:#acdda5;">  ✖ </span><span style="background-color:#5e4fa2;">  A </span>
 <span style="background-color:#6c7a89;"> ❌ </span><span style="background-color:#acdda5;">  D </span><span style="background-color:#acdda5;">  ✖ </span><span style="background-color:#acdda5;">  D </span><span style="background-color:#acdda5;">  D </span><span style="background-color:#e6f598;">  ✖ </span><span style="background-color:#5e4fa2;">  A </span>
@@ -91,12 +91,12 @@ Grid: 7 × 7, 7 colours. Top left is shown as (R1,C1)
 <span style="background-color:#d53e4f;">  ✖ </span><span style="background-color:#acdda5;">  ✖ </span><span style="background-color:#d53e4f;">  ✖ </span><span style="background-color:#fdae61;">  ✖ </span><span style="background-color:#fdae61;">  ✖ </span><span style="background-color:#3287bd;"> 👑 </span><span style="background-color:#5e4fa2;">  ✖ </span>
 <span style="background-color:#d53e4f;"> ❌ </span><span style="background-color:#acdda5;"> ❌ </span><span style="background-color:#fdae61;">  B </span><span style="background-color:#fdae61;">  B </span><span style="background-color:#6c7a89;">  ✖ </span><span style="background-color:#3287bd;">  ✖ </span><span style="background-color:#6c7a89;">  ✖ </span>
 
-0.0s:   QUEEN (R2,C2) [E]: region singleton [E]: eliminating row R2, col C2, region [E], diagonal adjacents → 6 cell(s)
-0.0s:   QUEEN (R4,C4) [G]: region singleton [G]: eliminating row R4, col C4, region [G], diagonal adjacents → 5 cell(s)
-0.0s:   QUEEN (R3,C7) [A]: row R3 singleton: eliminating row R3, col C7, region [A], diagonal adjacents → 1 cell(s)
-0.0s:   QUEEN (R5,C1) [F]: row R5 singleton: eliminating row R5, col C1, region [F], diagonal adjacents → 0 cell(s)
-0.0s:   QUEEN (R7,C3) [B]: row R7 singleton: eliminating row R7, col C3, region [B], diagonal adjacents → 0 cell(s)
-0.0s:   QUEEN (R1,C5) [D]: col C5 singleton: eliminating row R1, col C5, region [D], diagonal adjacents → 0 cell(s)
+0.1s:   QUEEN (R2,C2) [E]: region singleton [E]: eliminating row R2, col C2, region [E], diagonal adjacents → 6 cell(s)
+0.1s:   QUEEN (R4,C4) [G]: region singleton [G]: eliminating row R4, col C4, region [G], diagonal adjacents → 5 cell(s)
+0.1s:   QUEEN (R3,C7) [A]: row R3 singleton: eliminating row R3, col C7, region [A], diagonal adjacents → 1 cell(s)
+0.1s:   QUEEN (R5,C1) [F]: row R5 singleton: eliminating row R5, col C1, region [F], diagonal adjacents → 0 cell(s)
+0.1s:   QUEEN (R7,C3) [B]: row R7 singleton: eliminating row R7, col C3, region [B], diagonal adjacents → 0 cell(s)
+0.1s:   QUEEN (R1,C5) [D]: col C5 singleton: eliminating row R1, col C5, region [D], diagonal adjacents → 0 cell(s)
 <span style="background-color:#6c7a89;">  ✖ </span><span style="background-color:#5e4fa2;">  ✖ </span><span style="background-color:#e6f598;"> ❌ </span><span style="background-color:#acdda5;">  ✖ </span><span style="background-color:#acdda5;"> 👑 </span><span style="background-color:#acdda5;">  ✖ </span><span style="background-color:#5e4fa2;"> ❌ </span>
 <span style="background-color:#6c7a89;">  ✖ </span><span style="background-color:#6c7a89;"> 👑 </span><span style="background-color:#5e4fa2;">  ✖ </span><span style="background-color:#acdda5;">  ✖ </span><span style="background-color:#acdda5;"> ❌ </span><span style="background-color:#acdda5;">  ✖ </span><span style="background-color:#5e4fa2;"> ❌ </span>
 <span style="background-color:#6c7a89;">  ✖ </span><span style="background-color:#acdda5;"> ❌ </span><span style="background-color:#acdda5;">  ✖ </span><span style="background-color:#acdda5;"> ❌ </span><span style="background-color:#acdda5;"> ❌ </span><span style="background-color:#e6f598;">  ✖ </span><span style="background-color:#5e4fa2;"> 👑 </span>
@@ -105,7 +105,7 @@ Grid: 7 × 7, 7 colours. Top left is shown as (R1,C1)
 <span style="background-color:#d53e4f;">  ✖ </span><span style="background-color:#acdda5;">  ✖ </span><span style="background-color:#d53e4f;">  ✖ </span><span style="background-color:#fdae61;">  ✖ </span><span style="background-color:#fdae61;">  ✖ </span><span style="background-color:#3287bd;"> 👑 </span><span style="background-color:#5e4fa2;">  ✖ </span>
 <span style="background-color:#d53e4f;">  ✖ </span><span style="background-color:#acdda5;">  ✖ </span><span style="background-color:#fdae61;"> 👑 </span><span style="background-color:#fdae61;"> ❌ </span><span style="background-color:#6c7a89;">  ✖ </span><span style="background-color:#3287bd;">  ✖ </span><span style="background-color:#6c7a89;">  ✖ </span>
 
-0.0s: Solved: 7 queens placed.
+0.1s: Solved: 7 queens placed.
 </pre>
 </body>
 </html>

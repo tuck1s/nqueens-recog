@@ -94,7 +94,7 @@ Ten rules are applied in order of increasing cost:
 4. **Shadow** — eliminate any cell attacked by *all* candidates of a colour.
 5. **N-group** — k regions whose candidates are confined to k rows/cols; reserve those lines.
 6. **X-Wing** — c colours whose candidates fit within a rows + b columns (a+b=c); scan sizes 2 upward, apply the first valid hit found, then return to other rules.
-7. **Double-block** — _removed as this was just a special case of n-group, and was never being used_
+7. **Y-Wing** — a generalised X-Wing that uses colours forced into row/column intersections; see [y-wing.md](y-wing.md).
 8. **Elimination** — placing a queen at a candidate leaves another region empty; rule it out.
 9. **Lookahead** — trial-place a queen in every candidate of a colour; by default stop after the first contradictory colour. With `--lookahead-max-cands N`, consider all colours with ≤ N candidates in the same pass.
 10. **Search** — last resort: pick the most-constrained region, guess, and backtrack.
@@ -115,18 +115,17 @@ All $|R|$ rows and all $|C|$ columns will be claimed by these $k$ colours. There
 
 | $k$ | `R` | `C` | Shape | Elimination effect | Note |
 |-|-|-|-|-|-|
-| 2 | 1 | 1 | 1 row, 1 col | Only non-colours eliminated from row/col | This is just the region forced row/col rule |
-| 3 | 1 | 2 | 1 row, 2 cols | Non-colours eliminated from lines | True X-Wing starts at k=3 |
-| 3 | 2 | 1 | 2 rows, 1 col | Non-colours eliminated from lines | |
+| 2 | 1 | 1 | 1 row, 1 col | Non-colours eliminated from lines; group colours from the intersection | This overlaps the region forced row/col rule |
+| 3 | 1 | 2 | 1 row, 2 cols | Non-colours eliminated from lines; group colours from intersections | True X-Wing starts at k=3 |
+| 3 | 2 | 1 | 2 rows, 1 col | Non-colours eliminated from lines; group colours from intersections | |
 | 4 | 2 | 2 | 2 rows, 2 cols (cross) | Non-colours eliminated from lines; all 4 colours _also eliminated from crossing-points_ | **Classic X-Wing (cross/#)** |
 | ≥4 | ≥2 | ≥2 | R rows, C cols (cross) | Non-colours eliminated from lines; all k _also eliminated from crossing-points_ | Larger shapes, with crossing-point elimination|
-| ≥4 | 1 or k–1 | k–1 or 1 | 1 row, k–1 cols (or vice versa) | Only non-colours eliminated from lines | Larger shapes, no crossing-point elimination |
+| ≥4 | 1 or k–1 | k–1 or 1 | 1 row, k–1 cols (or vice versa) | Non-colours eliminated from lines; group colours from intersections | Larger shapes |
 
 **Generalisation for $k \geq 4$:**
 - If $k$ colours are confined to $|R|$ rows and $|C|$ columns with $|R| + |C| = k$:
    - All those rows and columns are claimed for those colours (eliminate other colours from those lines).
-   - If both $|R| \geq 2$ and $|C| \geq 2$, all $|R| \times |C|$ intersections (crossing-points) are also eliminated for all $k$ colours.
-   - If either $|R|=1$ or $|C|=1$, only line elimination applies—no crossing-points are eliminated.
+   - All $|R| \times |C|$ intersections (crossing-points) are also eliminated for the $k$ colours. This holds even when either dimension is one: the queens outside the selected rows must exhaust the selected columns (and vice versa).
 
 #### Large X-wings
 
