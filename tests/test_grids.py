@@ -279,6 +279,27 @@ def test_stepwise_y_wing_isolated_union_fires(capsys) -> None:
     assert "y-wing (isolated):" in capsys.readouterr().out
 
 
+def test_stepwise_y_wing_isolated_union_counts_column_side_colours() -> None:
+    """Regression: colours seen only in the selected columns must count in R ∪ C.
+
+    This board is a one-cell mutation of the isolated-union fixture. It keeps the
+    puzzle uniquely solvable, but introduces a colour in the relevant column side
+    of the union so the isolated-union bound no longer applies.
+    """
+    board = [
+        list("ABEBCC"),
+        list("ABBBCE"),
+        list("BFCFFC"),
+        list("DCDFCD"),
+        list("DAEACD"),
+        list("CDBCFA"),
+    ]
+    result, rules = solve_stepwise(board, x_wing_max=4, quiet=True)
+    assert result is not None
+    _assert_matches_solver(board, result)
+    assert "y-wing-isolated-union" not in rules
+
+
 def test_stepwise_y_wing_forced_intersection_fires(capsys) -> None:
     """Intersection-confined colours reduce a union's available capacity."""
     board = [
