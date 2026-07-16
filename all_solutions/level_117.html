@@ -86,18 +86,18 @@ Grid: 8 × 8, 8 colours. Top left is shown as (R1,C1)
 0.0s:     x-wing scan: size 5 → 0 hit(s) after 56 group(s)
 0.0s:     x-wing scan: size 6 → 0 hit(s) after 28 group(s)
 0.0s:     x-wing scan: size 7 → 0 hit(s) after 8 group(s)
-0.0s:   lookahead [C] (4 candidates):
-0.0s:     try (R2,C1) → B(R7,C7), A(R1,C8), D(R3,C6) → ok
-0.0s:       try (R4,C2) [E] → F(R5,C4), H(R8,C3) → [G] empty ✗
-0.0s:       try (R4,C4) [E] → F(R5,C2), G(R6,C5), H(R8,C3)
-0.0s:     try (R6,C1) → G(R7,C6) → ok
-0.0s:       try (R5,C3) [F] → E(R4,C5), D(R3,C2)
-0.0s:         try (R2,C4) [B] → H(R8,C8), A(R1,C7)
-0.0s:     try (R7,C1) → ok
-0.0s:       try (R4,C2) [E] → F(R5,C4), G(R6,C6), D(R3,C5)
-0.0s:         try (R2,C3) [B]
-0.0s:           try (R1,C7) [A] → H(R8,C8)
-0.0s:     try (R8,C1) → A(R1,C8), B(R7,C7), [H] empty → ✗ eliminated
+0.3s:   lookahead [C] (4 candidates):
+0.3s:     try (R2,C1) → B(R7,C7), A(R1,C8), D(R3,C6) → ok
+0.3s:       try (R4,C2) [E] → F(R5,C4), H(R8,C3) → [G] empty ✗
+0.3s:       try (R4,C4) [E] → F(R5,C2), G(R6,C5), H(R8,C3)
+0.3s:     try (R6,C1) → G(R7,C6) → ok
+0.3s:       try (R5,C3) [F] → E(R4,C5), D(R3,C2)
+0.3s:         try (R2,C4) [B] → H(R8,C8), A(R1,C7)
+0.3s:     try (R7,C1) → ok
+0.3s:       try (R4,C2) [E] → F(R5,C4), G(R6,C6), D(R3,C5)
+0.3s:         try (R2,C3) [B]
+0.3s:           try (R1,C7) [A] → H(R8,C8)
+0.3s:     try (R8,C1) → A(R1,C8), B(R7,C7), [H] empty → ✗ eliminated
 <span style="background-color:#5e4fa2;">  ✖ </span><span style="background-color:#5e4fa2;">  A </span><span style="background-color:#5e4fa2;">  A </span><span style="background-color:#5e4fa2;">  A </span><span style="background-color:#5e4fa2;">  A </span><span style="background-color:#5e4fa2;">  A </span><span style="background-color:#5e4fa2;">  A </span><span style="background-color:#5e4fa2;">  A </span>
 <span style="background-color:#3287bd;">  C </span><span style="background-color:#fdae61;">  B </span><span style="background-color:#fdae61;">  B </span><span style="background-color:#fdae61;">  B </span><span style="background-color:#fdae61;">  B </span><span style="background-color:#fdae61;">  B </span><span style="background-color:#fdae61;">  B </span><span style="background-color:#5e4fa2;">  ✖ </span>
 <span style="background-color:#3287bd;">  ✖ </span><span style="background-color:#acdda5;">  D </span><span style="background-color:#acdda5;">  D </span><span style="background-color:#acdda5;">  D </span><span style="background-color:#acdda5;">  D </span><span style="background-color:#acdda5;">  D </span><span style="background-color:#fdae61;">  ✖ </span><span style="background-color:#5e4fa2;">  ✖ </span>
@@ -107,7 +107,7 @@ Grid: 8 × 8, 8 colours. Top left is shown as (R1,C1)
 <span style="background-color:#3287bd;">  C </span><span style="background-color:#8e8875;">  H </span><span style="background-color:#8e8875;">  H </span><span style="background-color:#8e8875;">  H </span><span style="background-color:#8e8875;">  H </span><span style="background-color:#e6f598;">  G </span><span style="background-color:#fdae61;">  B </span><span style="background-color:#5e4fa2;">  ✖ </span>
 <span style="background-color:#3287bd;"> ❌ </span><span style="background-color:#8e8875;">  H </span><span style="background-color:#8e8875;">  H </span><span style="background-color:#8e8875;">  H </span><span style="background-color:#8e8875;">  H </span><span style="background-color:#8e8875;">  H </span><span style="background-color:#8e8875;">  H </span><span style="background-color:#8e8875;">  H </span>
 
-0.0s:   n-group: rows {R8} exclusive to {H} → 4 cell(s) eliminated
+0.3s:   n-group: rows {R8} exclusive to {H} → 4 cell(s) eliminated
 <span style="background-color:#5e4fa2;">  ✖ </span><span style="background-color:#5e4fa2;">  A </span><span style="background-color:#5e4fa2;">  A </span><span style="background-color:#5e4fa2;">  A </span><span style="background-color:#5e4fa2;">  A </span><span style="background-color:#5e4fa2;">  A </span><span style="background-color:#5e4fa2;">  A </span><span style="background-color:#5e4fa2;">  A </span>
 <span style="background-color:#3287bd;">  C </span><span style="background-color:#fdae61;">  B </span><span style="background-color:#fdae61;">  B </span><span style="background-color:#fdae61;">  B </span><span style="background-color:#fdae61;">  B </span><span style="background-color:#fdae61;">  B </span><span style="background-color:#fdae61;">  B </span><span style="background-color:#5e4fa2;">  ✖ </span>
 <span style="background-color:#3287bd;">  ✖ </span><span style="background-color:#acdda5;">  D </span><span style="background-color:#acdda5;">  D </span><span style="background-color:#acdda5;">  D </span><span style="background-color:#acdda5;">  D </span><span style="background-color:#acdda5;">  D </span><span style="background-color:#fdae61;">  ✖ </span><span style="background-color:#5e4fa2;">  ✖ </span>
@@ -117,32 +117,32 @@ Grid: 8 × 8, 8 colours. Top left is shown as (R1,C1)
 <span style="background-color:#3287bd;">  C </span><span style="background-color:#8e8875;"> ❌ </span><span style="background-color:#8e8875;"> ❌ </span><span style="background-color:#8e8875;"> ❌ </span><span style="background-color:#8e8875;"> ❌ </span><span style="background-color:#e6f598;">  G </span><span style="background-color:#fdae61;">  B </span><span style="background-color:#5e4fa2;">  ✖ </span>
 <span style="background-color:#3287bd;">  ✖ </span><span style="background-color:#8e8875;">  H </span><span style="background-color:#8e8875;">  H </span><span style="background-color:#8e8875;">  H </span><span style="background-color:#8e8875;">  H </span><span style="background-color:#8e8875;">  H </span><span style="background-color:#8e8875;">  H </span><span style="background-color:#8e8875;">  H </span>
 
-0.0s:   x-wing scan from size 2 up to 7...
-0.0s:     x-wing scan: size 2 → 0 hit(s) after 28 group(s)
-0.0s:     x-wing scan: size 3 → 0 hit(s) after 56 group(s)
-0.0s:     x-wing scan: size 4 → 0 hit(s) after 70 group(s)
-0.0s:     x-wing scan: size 5 → 0 hit(s) after 56 group(s)
-0.0s:     x-wing scan: size 6 → 0 hit(s) after 28 group(s)
-0.0s:     x-wing scan: size 7 → 0 hit(s) after 8 group(s)
-0.1s:   lookahead [D] (5 candidates):
-0.1s:     try (R3,C2) → ok
-0.1s:       try (R6,C1) [C] → G(R7,C6)
-0.1s:         try (R4,C4) [E] → [F] empty ✗
-0.1s:         try (R4,C5) [E] → F(R5,C3)
-0.1s:           try (R2,C4) [B] → H(R8,C8), A(R1,C7)
-0.1s:     try (R3,C3) → E(R4,C5), F(R5,C2) → ok
-0.1s:       try (R2,C1) [C] → B(R7,C7), G(R6,C4), A(R1,C6) → [H] empty ✗
-0.1s:       try (R7,C1) [C]
-0.1s:         try (R2,C6) [B] → G(R6,C4), A(R1,C8), H(R8,C7)
-0.1s:     try (R3,C4) → E(R4,C2), [F] empty → ✗ eliminated
-0.1s:     try (R3,C5) → E(R4,C2), F(R5,C4) → ok
-0.1s:       try (R6,C6) [G] → C(R7,C1)
-0.1s:         try (R2,C3) [B]
-0.1s:           try (R1,C7) [A] → H(R8,C8)
-0.1s:     try (R3,C6) → ok
-0.1s:       try (R2,C1) [C] → B(R7,C7), A(R1,C8)
-0.1s:         try (R4,C2) [E] → F(R5,C4), H(R8,C3) → [G] empty ✗
-0.1s:         try (R4,C4) [E] → F(R5,C2), G(R6,C5), H(R8,C3)
+0.3s:   x-wing scan from size 2 up to 7...
+0.3s:     x-wing scan: size 2 → 0 hit(s) after 28 group(s)
+0.3s:     x-wing scan: size 3 → 0 hit(s) after 56 group(s)
+0.3s:     x-wing scan: size 4 → 0 hit(s) after 70 group(s)
+0.3s:     x-wing scan: size 5 → 0 hit(s) after 56 group(s)
+0.3s:     x-wing scan: size 6 → 0 hit(s) after 28 group(s)
+0.3s:     x-wing scan: size 7 → 0 hit(s) after 8 group(s)
+0.6s:   lookahead [D] (5 candidates):
+0.6s:     try (R3,C2) → ok
+0.6s:       try (R6,C1) [C] → G(R7,C6)
+0.6s:         try (R4,C4) [E] → [F] empty ✗
+0.6s:         try (R4,C5) [E] → F(R5,C3)
+0.6s:           try (R2,C4) [B] → H(R8,C8), A(R1,C7)
+0.6s:     try (R3,C3) → E(R4,C5), F(R5,C2) → ok
+0.6s:       try (R2,C1) [C] → B(R7,C7), G(R6,C4), A(R1,C6) → [H] empty ✗
+0.6s:       try (R7,C1) [C]
+0.6s:         try (R2,C6) [B] → G(R6,C4), A(R1,C8), H(R8,C7)
+0.6s:     try (R3,C4) → E(R4,C2), [F] empty → ✗ eliminated
+0.6s:     try (R3,C5) → E(R4,C2), F(R5,C4) → ok
+0.6s:       try (R6,C6) [G] → C(R7,C1)
+0.6s:         try (R2,C3) [B]
+0.6s:           try (R1,C7) [A] → H(R8,C8)
+0.6s:     try (R3,C6) → ok
+0.6s:       try (R2,C1) [C] → B(R7,C7), A(R1,C8)
+0.6s:         try (R4,C2) [E] → F(R5,C4), H(R8,C3) → [G] empty ✗
+0.6s:         try (R4,C4) [E] → F(R5,C2), G(R6,C5), H(R8,C3)
 <span style="background-color:#5e4fa2;">  ✖ </span><span style="background-color:#5e4fa2;">  A </span><span style="background-color:#5e4fa2;">  A </span><span style="background-color:#5e4fa2;">  A </span><span style="background-color:#5e4fa2;">  A </span><span style="background-color:#5e4fa2;">  A </span><span style="background-color:#5e4fa2;">  A </span><span style="background-color:#5e4fa2;">  A </span>
 <span style="background-color:#3287bd;">  C </span><span style="background-color:#fdae61;">  B </span><span style="background-color:#fdae61;">  B </span><span style="background-color:#fdae61;">  B </span><span style="background-color:#fdae61;">  B </span><span style="background-color:#fdae61;">  B </span><span style="background-color:#fdae61;">  B </span><span style="background-color:#5e4fa2;">  ✖ </span>
 <span style="background-color:#3287bd;">  ✖ </span><span style="background-color:#acdda5;">  D </span><span style="background-color:#acdda5;">  D </span><span style="background-color:#acdda5;"> ❌ </span><span style="background-color:#acdda5;">  D </span><span style="background-color:#acdda5;">  D </span><span style="background-color:#fdae61;">  ✖ </span><span style="background-color:#5e4fa2;">  ✖ </span>
@@ -152,32 +152,32 @@ Grid: 8 × 8, 8 colours. Top left is shown as (R1,C1)
 <span style="background-color:#3287bd;">  C </span><span style="background-color:#8e8875;">  ✖ </span><span style="background-color:#8e8875;">  ✖ </span><span style="background-color:#8e8875;">  ✖ </span><span style="background-color:#8e8875;">  ✖ </span><span style="background-color:#e6f598;">  G </span><span style="background-color:#fdae61;">  B </span><span style="background-color:#5e4fa2;">  ✖ </span>
 <span style="background-color:#3287bd;">  ✖ </span><span style="background-color:#8e8875;">  H </span><span style="background-color:#8e8875;">  H </span><span style="background-color:#8e8875;">  H </span><span style="background-color:#8e8875;">  H </span><span style="background-color:#8e8875;">  H </span><span style="background-color:#8e8875;">  H </span><span style="background-color:#8e8875;">  H </span>
 
-0.1s:   x-wing scan from size 2 up to 7...
-0.1s:     x-wing scan: size 2 → 0 hit(s) after 28 group(s)
-0.1s:     x-wing scan: size 3 → 0 hit(s) after 56 group(s)
-0.1s:     x-wing scan: size 4 → 0 hit(s) after 70 group(s)
-0.1s:     x-wing scan: size 5 → 0 hit(s) after 56 group(s)
-0.1s:     x-wing scan: size 6 → 0 hit(s) after 28 group(s)
-0.1s:     x-wing scan: size 7 → 0 hit(s) after 8 group(s)
-0.1s:   lookahead [G] (5 candidates):
-0.1s:     try (R6,C2) → C(R2,C1), F(R5,C4), B(R7,C7), A(R1,C8), [E] empty → ✗ eliminated
-0.1s:     try (R6,C4) → F(R5,C2), E(R4,C5), D(R3,C3) → ok
-0.1s:       try (R2,C1) [C] → B(R7,C7), A(R1,C6) → [H] empty ✗
-0.1s:       try (R7,C1) [C]
-0.1s:         try (R2,C6) [B] → A(R1,C8), H(R8,C7)
-0.1s:     try (R6,C5) → ok
-0.1s:       try (R2,C1) [C] → B(R7,C7), A(R1,C8), D(R3,C6)
-0.1s:         try (R4,C2) [E] → [F] empty ✗
-0.1s:         try (R4,C4) [E] → F(R5,C2), H(R8,C3)
-0.1s:     try (R6,C6) → C(R7,C1) → ok
-0.1s:       try (R3,C2) [D]
-0.1s:         try (R4,C4) [E] → [F] empty ✗
-0.1s:         try (R4,C5) [E] → F(R5,C3)
-0.1s:           try (R2,C4) [B]
-0.1s:             try (R1,C7) [A] → H(R8,C8)
-0.1s:     try (R7,C6) → C(R6,C1) → ok
-0.1s:       try (R5,C3) [F] → E(R4,C5), D(R3,C2)
-0.1s:         try (R2,C4) [B] → H(R8,C8), A(R1,C7)
+0.6s:   x-wing scan from size 2 up to 7...
+0.6s:     x-wing scan: size 2 → 0 hit(s) after 28 group(s)
+0.6s:     x-wing scan: size 3 → 0 hit(s) after 56 group(s)
+0.6s:     x-wing scan: size 4 → 0 hit(s) after 70 group(s)
+0.6s:     x-wing scan: size 5 → 0 hit(s) after 56 group(s)
+0.6s:     x-wing scan: size 6 → 0 hit(s) after 28 group(s)
+0.6s:     x-wing scan: size 7 → 0 hit(s) after 8 group(s)
+0.9s:   lookahead [G] (5 candidates):
+0.9s:     try (R6,C2) → C(R2,C1), F(R5,C4), B(R7,C7), A(R1,C8), [E] empty → ✗ eliminated
+0.9s:     try (R6,C4) → F(R5,C2), E(R4,C5), D(R3,C3) → ok
+0.9s:       try (R2,C1) [C] → B(R7,C7), A(R1,C6) → [H] empty ✗
+0.9s:       try (R7,C1) [C]
+0.9s:         try (R2,C6) [B] → A(R1,C8), H(R8,C7)
+0.9s:     try (R6,C5) → ok
+0.9s:       try (R2,C1) [C] → B(R7,C7), A(R1,C8), D(R3,C6)
+0.9s:         try (R4,C2) [E] → [F] empty ✗
+0.9s:         try (R4,C4) [E] → F(R5,C2), H(R8,C3)
+0.9s:     try (R6,C6) → C(R7,C1) → ok
+0.9s:       try (R3,C2) [D]
+0.9s:         try (R4,C4) [E] → [F] empty ✗
+0.9s:         try (R4,C5) [E] → F(R5,C3)
+0.9s:           try (R2,C4) [B]
+0.9s:             try (R1,C7) [A] → H(R8,C8)
+0.9s:     try (R7,C6) → C(R6,C1) → ok
+0.9s:       try (R5,C3) [F] → E(R4,C5), D(R3,C2)
+0.9s:         try (R2,C4) [B] → H(R8,C8), A(R1,C7)
 <span style="background-color:#5e4fa2;">  ✖ </span><span style="background-color:#5e4fa2;">  A </span><span style="background-color:#5e4fa2;">  A </span><span style="background-color:#5e4fa2;">  A </span><span style="background-color:#5e4fa2;">  A </span><span style="background-color:#5e4fa2;">  A </span><span style="background-color:#5e4fa2;">  A </span><span style="background-color:#5e4fa2;">  A </span>
 <span style="background-color:#3287bd;">  C </span><span style="background-color:#fdae61;">  B </span><span style="background-color:#fdae61;">  B </span><span style="background-color:#fdae61;">  B </span><span style="background-color:#fdae61;">  B </span><span style="background-color:#fdae61;">  B </span><span style="background-color:#fdae61;">  B </span><span style="background-color:#5e4fa2;">  ✖ </span>
 <span style="background-color:#3287bd;">  ✖ </span><span style="background-color:#acdda5;">  D </span><span style="background-color:#acdda5;">  D </span><span style="background-color:#acdda5;">  ✖ </span><span style="background-color:#acdda5;">  D </span><span style="background-color:#acdda5;">  D </span><span style="background-color:#fdae61;">  ✖ </span><span style="background-color:#5e4fa2;">  ✖ </span>
@@ -187,44 +187,44 @@ Grid: 8 × 8, 8 colours. Top left is shown as (R1,C1)
 <span style="background-color:#3287bd;">  C </span><span style="background-color:#8e8875;">  ✖ </span><span style="background-color:#8e8875;">  ✖ </span><span style="background-color:#8e8875;">  ✖ </span><span style="background-color:#8e8875;">  ✖ </span><span style="background-color:#e6f598;">  G </span><span style="background-color:#fdae61;">  B </span><span style="background-color:#5e4fa2;">  ✖ </span>
 <span style="background-color:#3287bd;">  ✖ </span><span style="background-color:#8e8875;">  H </span><span style="background-color:#8e8875;">  H </span><span style="background-color:#8e8875;">  H </span><span style="background-color:#8e8875;">  H </span><span style="background-color:#8e8875;">  H </span><span style="background-color:#8e8875;">  H </span><span style="background-color:#8e8875;">  H </span>
 
-0.1s:   x-wing scan from size 2 up to 7...
-0.1s:     x-wing scan: size 2 → 0 hit(s) after 28 group(s)
-0.1s:     x-wing scan: size 3 → 0 hit(s) after 56 group(s)
-0.1s:     x-wing scan: size 4 → 0 hit(s) after 70 group(s)
-0.1s:     x-wing scan: size 5 → 0 hit(s) after 56 group(s)
-0.1s:     x-wing scan: size 6 → 0 hit(s) after 28 group(s)
-0.1s:     x-wing scan: size 7 → 0 hit(s) after 8 group(s)
-0.1s:   lookahead [A] (7 candidates):
-0.1s:     try (R1,C2) → H(R8,C8), B(R2,C7) → ✗ eliminated
-0.1s:       try (R6,C1) [C] → G(R7,C6)
-0.1s:         try (R3,C3) [D] → E(R4,C5) → [F] empty ✗
-0.1s:         try (R3,C5) [D] → [E] empty ✗
-0.1s:       ✗ (R6,C1)
-0.1s:       try (R7,C1) [C] → G(R6,C6)
-0.1s:         try (R3,C3) [D] → E(R4,C5) → [F] empty ✗
-0.1s:         try (R3,C5) [D] → [E] empty ✗
-0.1s:       ✗ (R7,C1)
-0.1s:     try (R1,C3) → H(R8,C8), B(R2,C7) → ok
-0.1s:       try (R6,C1) [C] → F(R5,C4), G(R7,C6), E(R4,C2), D(R3,C5)
-0.1s:     try (R1,C4) → H(R8,C8), B(R2,C7) → ok
-0.1s:       try (R6,C1) [C] → F(R5,C3), G(R7,C6), E(R4,C5), D(R3,C2)
-0.1s:     try (R1,C5) → H(R8,C8), B(R2,C7) → ✗ eliminated
-0.1s:       try (R6,C1) [C] → G(R7,C6)
-0.1s:         try (R3,C2) [D] → E(R4,C4) → [F] empty ✗
-0.1s:         try (R3,C3) [D] → [E] empty ✗
-0.1s:       ✗ (R6,C1)
-0.1s:       try (R7,C1) [C] → G(R6,C6)
-0.1s:         try (R3,C2) [D] → E(R4,C4) → [F] empty ✗
-0.1s:         try (R3,C3) [D] → [E] empty ✗
-0.1s:       ✗ (R7,C1)
-0.1s:     try (R1,C6) → H(R8,C8), colC7 empty → ✗ eliminated
-0.1s:     try (R1,C7) → H(R8,C8) → ok
-0.1s:       try (R6,C1) [C] → G(R7,C6)
-0.1s:         try (R5,C3) [F] → E(R4,C5), D(R3,C2), B(R2,C4)
-0.1s:     try (R1,C8) → ok
-0.1s:       try (R2,C1) [C] → B(R7,C7), D(R3,C6)
-0.1s:         try (R4,C2) [E] → F(R5,C4), H(R8,C3) → [G] empty ✗
-0.1s:         try (R4,C4) [E] → F(R5,C2), G(R6,C5), H(R8,C3)
+0.9s:   x-wing scan from size 2 up to 7...
+0.9s:     x-wing scan: size 2 → 0 hit(s) after 28 group(s)
+0.9s:     x-wing scan: size 3 → 0 hit(s) after 56 group(s)
+0.9s:     x-wing scan: size 4 → 0 hit(s) after 70 group(s)
+0.9s:     x-wing scan: size 5 → 0 hit(s) after 56 group(s)
+0.9s:     x-wing scan: size 6 → 0 hit(s) after 28 group(s)
+0.9s:     x-wing scan: size 7 → 0 hit(s) after 8 group(s)
+1.2s:   lookahead [A] (7 candidates):
+1.2s:     try (R1,C2) → H(R8,C8), B(R2,C7) → ✗ eliminated
+1.2s:       try (R6,C1) [C] → G(R7,C6)
+1.2s:         try (R3,C3) [D] → E(R4,C5) → [F] empty ✗
+1.2s:         try (R3,C5) [D] → [E] empty ✗
+1.2s:       ✗ (R6,C1)
+1.2s:       try (R7,C1) [C] → G(R6,C6)
+1.2s:         try (R3,C3) [D] → E(R4,C5) → [F] empty ✗
+1.2s:         try (R3,C5) [D] → [E] empty ✗
+1.2s:       ✗ (R7,C1)
+1.2s:     try (R1,C3) → H(R8,C8), B(R2,C7) → ok
+1.2s:       try (R6,C1) [C] → F(R5,C4), G(R7,C6), E(R4,C2), D(R3,C5)
+1.2s:     try (R1,C4) → H(R8,C8), B(R2,C7) → ok
+1.2s:       try (R6,C1) [C] → F(R5,C3), G(R7,C6), E(R4,C5), D(R3,C2)
+1.2s:     try (R1,C5) → H(R8,C8), B(R2,C7) → ✗ eliminated
+1.2s:       try (R6,C1) [C] → G(R7,C6)
+1.2s:         try (R3,C2) [D] → E(R4,C4) → [F] empty ✗
+1.2s:         try (R3,C3) [D] → [E] empty ✗
+1.2s:       ✗ (R6,C1)
+1.2s:       try (R7,C1) [C] → G(R6,C6)
+1.2s:         try (R3,C2) [D] → E(R4,C4) → [F] empty ✗
+1.2s:         try (R3,C3) [D] → [E] empty ✗
+1.2s:       ✗ (R7,C1)
+1.2s:     try (R1,C6) → H(R8,C8), colC7 empty → ✗ eliminated
+1.2s:     try (R1,C7) → H(R8,C8) → ok
+1.2s:       try (R6,C1) [C] → G(R7,C6)
+1.2s:         try (R5,C3) [F] → E(R4,C5), D(R3,C2), B(R2,C4)
+1.2s:     try (R1,C8) → ok
+1.2s:       try (R2,C1) [C] → B(R7,C7), D(R3,C6)
+1.2s:         try (R4,C2) [E] → F(R5,C4), H(R8,C3) → [G] empty ✗
+1.2s:         try (R4,C4) [E] → F(R5,C2), G(R6,C5), H(R8,C3)
 <span style="background-color:#5e4fa2;">  ✖ </span><span style="background-color:#5e4fa2;"> ❌ </span><span style="background-color:#5e4fa2;">  A </span><span style="background-color:#5e4fa2;">  A </span><span style="background-color:#5e4fa2;"> ❌ </span><span style="background-color:#5e4fa2;"> ❌ </span><span style="background-color:#5e4fa2;">  A </span><span style="background-color:#5e4fa2;">  A </span>
 <span style="background-color:#3287bd;">  C </span><span style="background-color:#fdae61;">  B </span><span style="background-color:#fdae61;">  B </span><span style="background-color:#fdae61;">  B </span><span style="background-color:#fdae61;">  B </span><span style="background-color:#fdae61;">  B </span><span style="background-color:#fdae61;">  B </span><span style="background-color:#5e4fa2;">  ✖ </span>
 <span style="background-color:#3287bd;">  ✖ </span><span style="background-color:#acdda5;">  D </span><span style="background-color:#acdda5;">  D </span><span style="background-color:#acdda5;">  ✖ </span><span style="background-color:#acdda5;">  D </span><span style="background-color:#acdda5;">  D </span><span style="background-color:#fdae61;">  ✖ </span><span style="background-color:#5e4fa2;">  ✖ </span>
@@ -234,45 +234,45 @@ Grid: 8 × 8, 8 colours. Top left is shown as (R1,C1)
 <span style="background-color:#3287bd;">  C </span><span style="background-color:#8e8875;">  ✖ </span><span style="background-color:#8e8875;">  ✖ </span><span style="background-color:#8e8875;">  ✖ </span><span style="background-color:#8e8875;">  ✖ </span><span style="background-color:#e6f598;">  G </span><span style="background-color:#fdae61;">  B </span><span style="background-color:#5e4fa2;">  ✖ </span>
 <span style="background-color:#3287bd;">  ✖ </span><span style="background-color:#8e8875;">  H </span><span style="background-color:#8e8875;">  H </span><span style="background-color:#8e8875;">  H </span><span style="background-color:#8e8875;">  H </span><span style="background-color:#8e8875;">  H </span><span style="background-color:#8e8875;">  H </span><span style="background-color:#8e8875;">  H </span>
 
-0.1s:   x-wing scan from size 2 up to 7...
-0.1s:     x-wing scan: size 2 → 0 hit(s) after 28 group(s)
-0.1s:     x-wing scan: size 3 → 0 hit(s) after 56 group(s)
-0.1s:     x-wing scan: size 4 → 0 hit(s) after 70 group(s)
-0.1s:     x-wing scan: size 5 → 0 hit(s) after 56 group(s)
-0.1s:     x-wing scan: size 6 → 0 hit(s) after 28 group(s)
-0.1s:     x-wing scan: size 7 → 0 hit(s) after 8 group(s)
-0.2s:   lookahead [B] (7 candidates):
-0.2s:     try (R2,C2) → F(R5,C3), colC4 empty → ✗ eliminated
-0.2s:     try (R2,C3) → ok
-0.2s:       try (R1,C7) [A] → H(R8,C8)
-0.2s:         try (R6,C1) [C] → F(R5,C4), G(R7,C6), D(R3,C5), E(R4,C2)
-0.2s:     try (R2,C4) → F(R5,C3), E(R4,C5), D(R3,C2) → ok
-0.2s:       try (R1,C7) [A] → H(R8,C8)
-0.2s:         try (R6,C1) [C] → G(R7,C6)
-0.2s:     try (R2,C5) → ✗ eliminated
-0.2s:       try (R1,C7) [A] → H(R8,C8)
-0.2s:         try (R6,C1) [C] → G(R7,C6)
-0.2s:           try (R3,C2) [D] → E(R4,C4) → [F] empty ✗
-0.2s:           try (R3,C3) [D] → [E] empty ✗
-0.2s:         ✗ (R6,C1)
-0.2s:         try (R7,C1) [C] → G(R6,C6)
-0.2s:           try (R3,C2) [D] → E(R4,C4) → [F] empty ✗
-0.2s:           try (R3,C3) [D] → [E] empty ✗
-0.2s:         ✗ (R7,C1)
-0.2s:       ✗ (R1,C7)
-0.2s:       try (R1,C8) [A] → H(R8,C7), C(R7,C1), G(R6,C6)
-0.2s:         try (R3,C2) [D] → E(R4,C4) → [F] empty ✗
-0.2s:         try (R3,C3) [D] → [E] empty ✗
-0.2s:       ✗ (R1,C8)
-0.2s:     try (R2,C6) → C(R7,C1), H(R8,C7), A(R1,C8) → ok
-0.2s:       try (R3,C2) [D] → F(R5,C3) → col C4 empty ✗
-0.2s:       try (R3,C3) [D] → E(R4,C5), F(R5,C2), G(R6,C4)
-0.2s:     try (R2,C7) → H(R8,C8) → ok
-0.2s:       try (R1,C3) [A]
-0.2s:         try (R6,C1) [C] → F(R5,C4), G(R7,C6), E(R4,C2), D(R3,C5)
-0.2s:     try (R7,C7) → C(R2,C1), D(R3,C6), A(R1,C8) → ok
-0.2s:       try (R4,C2) [E] → F(R5,C4), H(R8,C3) → [G] empty ✗
-0.2s:       try (R4,C4) [E] → F(R5,C2), G(R6,C5), H(R8,C3)
+1.2s:   x-wing scan from size 2 up to 7...
+1.2s:     x-wing scan: size 2 → 0 hit(s) after 28 group(s)
+1.2s:     x-wing scan: size 3 → 0 hit(s) after 56 group(s)
+1.2s:     x-wing scan: size 4 → 0 hit(s) after 70 group(s)
+1.2s:     x-wing scan: size 5 → 0 hit(s) after 56 group(s)
+1.2s:     x-wing scan: size 6 → 0 hit(s) after 28 group(s)
+1.2s:     x-wing scan: size 7 → 0 hit(s) after 8 group(s)
+1.5s:   lookahead [B] (7 candidates):
+1.5s:     try (R2,C2) → F(R5,C3), colC4 empty → ✗ eliminated
+1.5s:     try (R2,C3) → ok
+1.5s:       try (R1,C7) [A] → H(R8,C8)
+1.5s:         try (R6,C1) [C] → F(R5,C4), G(R7,C6), D(R3,C5), E(R4,C2)
+1.5s:     try (R2,C4) → F(R5,C3), E(R4,C5), D(R3,C2) → ok
+1.5s:       try (R1,C7) [A] → H(R8,C8)
+1.5s:         try (R6,C1) [C] → G(R7,C6)
+1.5s:     try (R2,C5) → ✗ eliminated
+1.5s:       try (R1,C7) [A] → H(R8,C8)
+1.5s:         try (R6,C1) [C] → G(R7,C6)
+1.5s:           try (R3,C2) [D] → E(R4,C4) → [F] empty ✗
+1.5s:           try (R3,C3) [D] → [E] empty ✗
+1.5s:         ✗ (R6,C1)
+1.5s:         try (R7,C1) [C] → G(R6,C6)
+1.5s:           try (R3,C2) [D] → E(R4,C4) → [F] empty ✗
+1.5s:           try (R3,C3) [D] → [E] empty ✗
+1.5s:         ✗ (R7,C1)
+1.5s:       ✗ (R1,C7)
+1.5s:       try (R1,C8) [A] → H(R8,C7), C(R7,C1), G(R6,C6)
+1.5s:         try (R3,C2) [D] → E(R4,C4) → [F] empty ✗
+1.5s:         try (R3,C3) [D] → [E] empty ✗
+1.5s:       ✗ (R1,C8)
+1.5s:     try (R2,C6) → C(R7,C1), H(R8,C7), A(R1,C8) → ok
+1.5s:       try (R3,C2) [D] → F(R5,C3) → col C4 empty ✗
+1.5s:       try (R3,C3) [D] → E(R4,C5), F(R5,C2), G(R6,C4)
+1.5s:     try (R2,C7) → H(R8,C8) → ok
+1.5s:       try (R1,C3) [A]
+1.5s:         try (R6,C1) [C] → F(R5,C4), G(R7,C6), E(R4,C2), D(R3,C5)
+1.5s:     try (R7,C7) → C(R2,C1), D(R3,C6), A(R1,C8) → ok
+1.5s:       try (R4,C2) [E] → F(R5,C4), H(R8,C3) → [G] empty ✗
+1.5s:       try (R4,C4) [E] → F(R5,C2), G(R6,C5), H(R8,C3)
 <span style="background-color:#5e4fa2;">  ✖ </span><span style="background-color:#5e4fa2;">  ✖ </span><span style="background-color:#5e4fa2;">  A </span><span style="background-color:#5e4fa2;">  A </span><span style="background-color:#5e4fa2;">  ✖ </span><span style="background-color:#5e4fa2;">  ✖ </span><span style="background-color:#5e4fa2;">  A </span><span style="background-color:#5e4fa2;">  A </span>
 <span style="background-color:#3287bd;">  C </span><span style="background-color:#fdae61;"> ❌ </span><span style="background-color:#fdae61;">  B </span><span style="background-color:#fdae61;">  B </span><span style="background-color:#fdae61;"> ❌ </span><span style="background-color:#fdae61;">  B </span><span style="background-color:#fdae61;">  B </span><span style="background-color:#5e4fa2;">  ✖ </span>
 <span style="background-color:#3287bd;">  ✖ </span><span style="background-color:#acdda5;">  D </span><span style="background-color:#acdda5;">  D </span><span style="background-color:#acdda5;">  ✖ </span><span style="background-color:#acdda5;">  D </span><span style="background-color:#acdda5;">  D </span><span style="background-color:#fdae61;">  ✖ </span><span style="background-color:#5e4fa2;">  ✖ </span>
@@ -282,26 +282,26 @@ Grid: 8 × 8, 8 colours. Top left is shown as (R1,C1)
 <span style="background-color:#3287bd;">  C </span><span style="background-color:#8e8875;">  ✖ </span><span style="background-color:#8e8875;">  ✖ </span><span style="background-color:#8e8875;">  ✖ </span><span style="background-color:#8e8875;">  ✖ </span><span style="background-color:#e6f598;">  G </span><span style="background-color:#fdae61;">  B </span><span style="background-color:#5e4fa2;">  ✖ </span>
 <span style="background-color:#3287bd;">  ✖ </span><span style="background-color:#8e8875;">  H </span><span style="background-color:#8e8875;">  H </span><span style="background-color:#8e8875;">  H </span><span style="background-color:#8e8875;">  H </span><span style="background-color:#8e8875;">  H </span><span style="background-color:#8e8875;">  H </span><span style="background-color:#8e8875;">  H </span>
 
-0.2s:   x-wing scan from size 2 up to 7...
-0.2s:     x-wing scan: size 2 → 0 hit(s) after 28 group(s)
-0.2s:     x-wing scan: size 3 → 0 hit(s) after 56 group(s)
-0.2s:     x-wing scan: size 4 → 0 hit(s) after 70 group(s)
-0.2s:     x-wing scan: size 5 → 0 hit(s) after 56 group(s)
-0.2s:     x-wing scan: size 6 → 0 hit(s) after 28 group(s)
-0.2s:     x-wing scan: size 7 → 0 hit(s) after 8 group(s)
-0.2s:   lookahead [H] (7 candidates):
-0.2s:     try (R8,C2) → A(R1,C8), B(R7,C7), C(R2,C1), D(R3,C6), E(R4,C4), G(R6,C5), [F] empty → ✗ eliminated
-0.2s:     try (R8,C3) → A(R1,C8), B(R7,C7), C(R2,C1), D(R3,C6), G(R6,C5), F(R5,C2), E(R4,C4) → ok
-0.2s:     try (R8,C4) → A(R1,C8), B(R7,C7), G(R6,C5), C(R2,C1), E(R4,C2), D(R3,C6), [F] empty → ✗ eliminated
-0.2s:     try (R8,C5) → A(R1,C8), B(R7,C7), G(R6,C4), C(R2,C1), E(R4,C2), D(R3,C6), [F] empty → ✗ eliminated
-0.2s:     try (R8,C6) → C(R7,C1), A(R1,C8), colC7 empty → ✗ eliminated
-0.2s:     try (R8,C7) → C(R7,C1), A(R1,C8) → ok
-0.2s:       try (R2,C3) [B]
-0.2s:         try (R3,C5) [D] → E(R4,C2), F(R5,C4), G(R6,C6)
-0.2s:     try (R8,C8) → ok
-0.2s:       try (R6,C1) [C] → G(R7,C6)
-0.2s:         try (R3,C2) [D] → E(R4,C5), F(R5,C3)
-0.2s:           try (R1,C4) [A] → B(R2,C7)
+1.5s:   x-wing scan from size 2 up to 7...
+1.5s:     x-wing scan: size 2 → 0 hit(s) after 28 group(s)
+1.5s:     x-wing scan: size 3 → 0 hit(s) after 56 group(s)
+1.5s:     x-wing scan: size 4 → 0 hit(s) after 70 group(s)
+1.5s:     x-wing scan: size 5 → 0 hit(s) after 56 group(s)
+1.5s:     x-wing scan: size 6 → 0 hit(s) after 28 group(s)
+1.6s:     x-wing scan: size 7 → 0 hit(s) after 8 group(s)
+1.8s:   lookahead [H] (7 candidates):
+1.8s:     try (R8,C2) → A(R1,C8), B(R7,C7), C(R2,C1), D(R3,C6), E(R4,C4), G(R6,C5), [F] empty → ✗ eliminated
+1.8s:     try (R8,C3) → A(R1,C8), B(R7,C7), C(R2,C1), D(R3,C6), G(R6,C5), F(R5,C2), E(R4,C4) → ok
+1.8s:     try (R8,C4) → A(R1,C8), B(R7,C7), G(R6,C5), C(R2,C1), E(R4,C2), D(R3,C6), [F] empty → ✗ eliminated
+1.8s:     try (R8,C5) → A(R1,C8), B(R7,C7), G(R6,C4), C(R2,C1), E(R4,C2), D(R3,C6), [F] empty → ✗ eliminated
+1.8s:     try (R8,C6) → C(R7,C1), A(R1,C8), colC7 empty → ✗ eliminated
+1.8s:     try (R8,C7) → C(R7,C1), A(R1,C8) → ok
+1.8s:       try (R2,C3) [B]
+1.8s:         try (R3,C5) [D] → E(R4,C2), F(R5,C4), G(R6,C6)
+1.8s:     try (R8,C8) → ok
+1.8s:       try (R6,C1) [C] → G(R7,C6)
+1.8s:         try (R3,C2) [D] → E(R4,C5), F(R5,C3)
+1.8s:           try (R1,C4) [A] → B(R2,C7)
 <span style="background-color:#5e4fa2;">  ✖ </span><span style="background-color:#5e4fa2;">  ✖ </span><span style="background-color:#5e4fa2;">  A </span><span style="background-color:#5e4fa2;">  A </span><span style="background-color:#5e4fa2;">  ✖ </span><span style="background-color:#5e4fa2;">  ✖ </span><span style="background-color:#5e4fa2;">  A </span><span style="background-color:#5e4fa2;">  A </span>
 <span style="background-color:#3287bd;">  C </span><span style="background-color:#fdae61;">  ✖ </span><span style="background-color:#fdae61;">  B </span><span style="background-color:#fdae61;">  B </span><span style="background-color:#fdae61;">  ✖ </span><span style="background-color:#fdae61;">  B </span><span style="background-color:#fdae61;">  B </span><span style="background-color:#5e4fa2;">  ✖ </span>
 <span style="background-color:#3287bd;">  ✖ </span><span style="background-color:#acdda5;">  D </span><span style="background-color:#acdda5;">  D </span><span style="background-color:#acdda5;">  ✖ </span><span style="background-color:#acdda5;">  D </span><span style="background-color:#acdda5;">  D </span><span style="background-color:#fdae61;">  ✖ </span><span style="background-color:#5e4fa2;">  ✖ </span>
@@ -311,23 +311,23 @@ Grid: 8 × 8, 8 colours. Top left is shown as (R1,C1)
 <span style="background-color:#3287bd;">  C </span><span style="background-color:#8e8875;">  ✖ </span><span style="background-color:#8e8875;">  ✖ </span><span style="background-color:#8e8875;">  ✖ </span><span style="background-color:#8e8875;">  ✖ </span><span style="background-color:#e6f598;">  G </span><span style="background-color:#fdae61;">  B </span><span style="background-color:#5e4fa2;">  ✖ </span>
 <span style="background-color:#3287bd;">  ✖ </span><span style="background-color:#8e8875;"> ❌ </span><span style="background-color:#8e8875;">  H </span><span style="background-color:#8e8875;"> ❌ </span><span style="background-color:#8e8875;"> ❌ </span><span style="background-color:#8e8875;"> ❌ </span><span style="background-color:#8e8875;">  H </span><span style="background-color:#8e8875;">  H </span>
 
-0.2s:   x-wing scan from size 2 up to 7...
-0.2s:     x-wing scan: size 2 → 0 hit(s) after 28 group(s)
-0.2s:     x-wing scan: size 3 → 0 hit(s) after 56 group(s)
-0.2s:     x-wing scan: size 4 → 0 hit(s) after 70 group(s)
-0.2s:     x-wing scan: size 5 → 0 hit(s) after 56 group(s)
-0.2s:     x-wing scan: size 6 → 0 hit(s) after 28 group(s)
-0.2s:     x-wing scan: size 7 → 0 hit(s) after 8 group(s)
-0.2s:   search [C] (3 cands):
-0.2s:     try (R2,C1) [C] → B(R7,C7), H(R8,C3), D(R3,C6), A(R1,C8), G(R6,C5), F(R5,C2), E(R4,C4)
-0.2s:   QUEEN (R1,C8) [A]: search: eliminating row R1, col C8, region [A], diagonal adjacents → 5 cell(s)
-0.2s:   QUEEN (R2,C1) [C]: search: eliminating row R2, col C1, region [C], diagonal adjacents → 6 cell(s)
-0.2s:   QUEEN (R3,C6) [D]: search: eliminating row R3, col C6, region [D], diagonal adjacents → 5 cell(s)
-0.2s:   QUEEN (R4,C4) [E]: search: eliminating row R4, col C4, region [E], diagonal adjacents → 4 cell(s)
-0.2s:   QUEEN (R5,C2) [F]: search: eliminating row R5, col C2, region [F], diagonal adjacents → 0 cell(s)
-0.2s:   QUEEN (R6,C5) [G]: search: eliminating row R6, col C5, region [G], diagonal adjacents → 0 cell(s)
-0.2s:   QUEEN (R7,C7) [B]: search: eliminating row R7, col C7, region [B], diagonal adjacents → 1 cell(s)
-0.2s:   QUEEN (R8,C3) [H]: search: eliminating row R8, col C3, region [H], diagonal adjacents → 0 cell(s)
+1.8s:   x-wing scan from size 2 up to 7...
+1.8s:     x-wing scan: size 2 → 0 hit(s) after 28 group(s)
+1.8s:     x-wing scan: size 3 → 0 hit(s) after 56 group(s)
+1.8s:     x-wing scan: size 4 → 0 hit(s) after 70 group(s)
+1.8s:     x-wing scan: size 5 → 0 hit(s) after 56 group(s)
+1.9s:     x-wing scan: size 6 → 0 hit(s) after 28 group(s)
+1.9s:     x-wing scan: size 7 → 0 hit(s) after 8 group(s)
+2.1s:   search [C] (3 cands):
+2.1s:     try (R2,C1) [C] → B(R7,C7), H(R8,C3), D(R3,C6), A(R1,C8), G(R6,C5), F(R5,C2), E(R4,C4)
+2.1s:   QUEEN (R1,C8) [A]: search: eliminating row R1, col C8, region [A], diagonal adjacents → 5 cell(s)
+2.1s:   QUEEN (R2,C1) [C]: search: eliminating row R2, col C1, region [C], diagonal adjacents → 6 cell(s)
+2.1s:   QUEEN (R3,C6) [D]: search: eliminating row R3, col C6, region [D], diagonal adjacents → 5 cell(s)
+2.1s:   QUEEN (R4,C4) [E]: search: eliminating row R4, col C4, region [E], diagonal adjacents → 4 cell(s)
+2.1s:   QUEEN (R5,C2) [F]: search: eliminating row R5, col C2, region [F], diagonal adjacents → 0 cell(s)
+2.1s:   QUEEN (R6,C5) [G]: search: eliminating row R6, col C5, region [G], diagonal adjacents → 0 cell(s)
+2.1s:   QUEEN (R7,C7) [B]: search: eliminating row R7, col C7, region [B], diagonal adjacents → 1 cell(s)
+2.1s:   QUEEN (R8,C3) [H]: search: eliminating row R8, col C3, region [H], diagonal adjacents → 0 cell(s)
 <span style="background-color:#5e4fa2;">  ✖ </span><span style="background-color:#5e4fa2;">  ✖ </span><span style="background-color:#5e4fa2;"> ❌ </span><span style="background-color:#5e4fa2;"> ❌ </span><span style="background-color:#5e4fa2;">  ✖ </span><span style="background-color:#5e4fa2;">  ✖ </span><span style="background-color:#5e4fa2;"> ❌ </span><span style="background-color:#5e4fa2;"> 👑 </span>
 <span style="background-color:#3287bd;"> 👑 </span><span style="background-color:#fdae61;">  ✖ </span><span style="background-color:#fdae61;"> ❌ </span><span style="background-color:#fdae61;"> ❌ </span><span style="background-color:#fdae61;">  ✖ </span><span style="background-color:#fdae61;"> ❌ </span><span style="background-color:#fdae61;"> ❌ </span><span style="background-color:#5e4fa2;">  ✖ </span>
 <span style="background-color:#3287bd;">  ✖ </span><span style="background-color:#acdda5;"> ❌ </span><span style="background-color:#acdda5;"> ❌ </span><span style="background-color:#acdda5;">  ✖ </span><span style="background-color:#acdda5;"> ❌ </span><span style="background-color:#acdda5;"> 👑 </span><span style="background-color:#fdae61;">  ✖ </span><span style="background-color:#5e4fa2;">  ✖ </span>
@@ -337,7 +337,7 @@ Grid: 8 × 8, 8 colours. Top left is shown as (R1,C1)
 <span style="background-color:#3287bd;"> ❌ </span><span style="background-color:#8e8875;">  ✖ </span><span style="background-color:#8e8875;">  ✖ </span><span style="background-color:#8e8875;">  ✖ </span><span style="background-color:#8e8875;">  ✖ </span><span style="background-color:#e6f598;"> ❌ </span><span style="background-color:#fdae61;"> 👑 </span><span style="background-color:#5e4fa2;">  ✖ </span>
 <span style="background-color:#3287bd;">  ✖ </span><span style="background-color:#8e8875;">  ✖ </span><span style="background-color:#8e8875;"> 👑 </span><span style="background-color:#8e8875;">  ✖ </span><span style="background-color:#8e8875;">  ✖ </span><span style="background-color:#8e8875;">  ✖ </span><span style="background-color:#8e8875;"> ❌ </span><span style="background-color:#8e8875;"> ❌ </span>
 
-0.2s: Solved: 8 queens placed.
+2.1s: Solved: 8 queens placed.
 </pre>
 </body>
 </html>

@@ -262,6 +262,60 @@ def _assert_matches_solver(board: list[list[str]], stepwise_result: dict[int, in
 # Stepwise solver: X-Wing rule
 # ---------------------------------------------------------------------------
 
+def test_stepwise_y_wing_isolated_union_fires(capsys) -> None:
+    """An isolated union locks the only possible intersection colour."""
+    board = [
+        list("AAEBCC"),
+        list("ABBBCE"),
+        list("BFCFFC"),
+        list("DCDFCD"),
+        list("DAEACD"),
+        list("CDBCFA"),
+    ]
+    result, rules = solve_stepwise(board, x_wing_max=4)
+    assert result is not None
+    _assert_matches_solver(board, result)
+    assert "y-wing-isolated-union" in rules
+    assert "y-wing (isolated):" in capsys.readouterr().out
+
+
+def test_stepwise_y_wing_isolated_union_counts_column_side_colours() -> None:
+    """Regression: colours seen only in the selected columns must count in R ∪ C.
+
+    This board is a one-cell mutation of the isolated-union fixture. It keeps the
+    puzzle uniquely solvable, but introduces a colour in the relevant column side
+    of the union so the isolated-union bound no longer applies.
+    """
+    board = [
+        list("ABEBCC"),
+        list("ABBBCE"),
+        list("BFCFFC"),
+        list("DCDFCD"),
+        list("DAEACD"),
+        list("CDBCFA"),
+    ]
+    result, rules = solve_stepwise(board, x_wing_max=4, quiet=True)
+    assert result is not None
+    _assert_matches_solver(board, result)
+    assert "y-wing-isolated-union" not in rules
+
+
+def test_stepwise_y_wing_forced_intersection_fires(capsys) -> None:
+    """Intersection-confined colours reduce a union's available capacity."""
+    board = [
+        list("BAFFBE"),
+        list("DDBBAF"),
+        list("CACDBC"),
+        list("DAACCB"),
+        list("AFECDA"),
+        list("BCDDFE"),
+    ]
+    result, rules = solve_stepwise(board, x_wing_max=4)
+    assert result is not None
+    _assert_matches_solver(board, result)
+    assert "y-wing-forced-intersections" in rules
+    assert "y-wing (forced intersection):" in capsys.readouterr().out
+
 def test_stepwise_x_wing_fires(capsys) -> None:
     """{A,B} cells are confined to row-0 ∪ col-0, forcing rule_x_wing to fire.
 
@@ -905,4 +959,3 @@ def test_stepwise_solves_puzzle(image_path: Path, label: str, expected_cols: lis
     assert cols == expected_cols, (
         f"Puzzle {label}: stepwise solution {cols} != expected {expected_cols}"
     )
-

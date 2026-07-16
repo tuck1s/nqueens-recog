@@ -32,7 +32,8 @@ Rule names are based upon (and extend) https://www.caterbum.com/blog/linkedin-qu
       claim every row in R and every column in C; eliminate other colours'
       candidates from those rows and columns.  The typical case is c=4,
       a=b=2 (two pairs of colours forming a cross pattern).
-  7. **Double-block** — removed from the trace; it is a special case of N-group.
+  7. **Y-Wing** — a generalised X-Wing that accounts for queens forced into
+      row/column intersections.
   8. **Elimination** — if placing a queen at a candidate cell would leave
       some other region with no remaining candidates at all, that cell is
       ruled out (one-step lookahead).
@@ -601,7 +602,149 @@ def solve_stepwise(
         return False
 
     # ------------------------------------------------------------------
-    # Simulation helpers — shared by rules 5–8
+    # Rule — Y-Wing (generalised X-Wing)
+    # ------------------------------------------------------------------
+
+    def rule_y_wing_isolated_union() -> bool:
+        """Lock colours to R ∩ C when R ∪ C admits only those colours.
+
+        Let ``R`` contain ``a`` rows and ``C`` contain ``b`` columns.  If the
+        union has candidates from exactly ``k`` colours, its ``a + b`` line
+        queens require at least ``a + b - k`` placements in ``R ∩ C``.  When
+        exactly that many colours can occupy the intersection, they must do
+        so, and their candidates outside it can be removed.
+        """
+        unsolved = [col for col in colours if not colour_is_solved(col)]
+        free_rows = [r for r in range(n) if r not in queens]
+        free_cols = [c for c in range(n) if c not in queens.values()]
+        max_dim = min(len(unsolved), n - 1, x_wing_max)
+        max_span = min(len(free_rows) + len(free_cols), x_wing_max + 1)
+        if max_dim < 2:
+            return False
+
+        for a in range(1, min(len(free_rows), max_dim, max_span - 1) + 1):
+            for b in range(1, min(len(free_cols), max_dim, max_span - a) + 1):
+                for row_group in combinations(free_rows, a):
+                    row_set = set(row_group)
+                    for col_group in combinations(free_cols, b):
+                        col_set = set(col_group)
+                        union_colours = {
+                            board[r2][c2]
+                            for r2 in row_set
+                            for c2 in range(n)
+                            if candidates[r2][c2]
+                        } | {
+                            board[r2][c2]
+                            for c2 in col_set
+                            for r2 in range(n)
+                            if candidates[r2][c2]
+                        }
+                        # Every candidate in the union must belong to one of
+                        # the k colours; a non-positive bound is ordinary
+                        # X-Wing territory rather than a forced intersection.
+                        k = len(union_colours)
+                        forced = a + b - k
+                        if k > x_wing_max or forced <= 0 or forced > min(a, b):
+                            continue
+
+                        intersection_colours = {
+                            board[r2][c2]
+                            for r2 in row_set for c2 in col_set
+                            if candidates[r2][c2]
+                        }
+                        if len(intersection_colours) != forced:
+                            continue
+
+                        elim_cells = {
+                            (r2, c2)
+                            for colour in intersection_colours
+                            for r2, c2 in active_for_colour(colour)
+                            if r2 not in row_set or c2 not in col_set
+                        }
+                        if not elim_cells:
+                            continue
+                        for r2, c2 in elim_cells:
+                            eliminate(r2, c2, trace=False)
+
+                        rows_str = ",".join(row_str(r2) for r2 in sorted(row_set))
+                        cols_str = ",".join(col_str(c2) for c2 in sorted(col_set))
+                        label = "{" + ",".join(sorted(intersection_colours)) + "}"
+                        out(
+                            f"  y-wing (isolated): {label} forced into intersection "
+                            f"of rows {{{rows_str}}} and cols {{{cols_str}}} "
+                            f"→ {len(elim_cells)} cell(s) eliminated"
+                        )
+                        return True
+        return False
+
+    def rule_y_wing_forced_intersections() -> bool:
+        """Claim R ∪ C when colours already locked in R ∩ C reduce capacity.
+
+        Colours confined to ``R ∩ C`` consume one row and one column each.
+        If precisely ``|R| + |C| - locked`` colours are confined to ``R ∪ C``,
+        they saturate the union, so all other colours can be eliminated from it.
+        """
+        unsolved = [col for col in colours if not colour_is_solved(col)]
+        cands_by = {colour: active_for_colour(colour) for colour in unsolved}
+        free_rows = [r for r in range(n) if r not in queens]
+        free_cols = [c for c in range(n) if c not in queens.values()]
+        max_dim = min(len(unsolved), n - 1, x_wing_max)
+        max_span = min(len(free_rows) + len(free_cols), x_wing_max + 1)
+        if max_dim < 2:
+            return False
+
+        for a in range(1, min(len(free_rows), max_dim, max_span - 1) + 1):
+            for b in range(1, min(len(free_cols), max_dim, max_span - a) + 1):
+                for row_group in combinations(free_rows, a):
+                    row_set = set(row_group)
+                    for col_group in combinations(free_cols, b):
+                        col_set = set(col_group)
+                        intersection_colours = {
+                            colour for colour, cands in cands_by.items()
+                            if cands and all(r2 in row_set and c2 in col_set for r2, c2 in cands)
+                        }
+                        locked = len(intersection_colours)
+                        if not locked:
+                            continue
+                        target = a + b - locked
+                        if target <= 0 or target > x_wing_max:
+                            continue
+                        union_colours = {
+                            colour for colour, cands in cands_by.items()
+                            if cands and all(r2 in row_set or c2 in col_set for r2, c2 in cands)
+                        }
+                        if len(union_colours) != target:
+                            continue
+
+                        elim_cells = {
+                            (r2, c2)
+                            for r2 in row_set
+                            for c2 in range(n)
+                            if candidates[r2][c2] and board[r2][c2] not in union_colours
+                        } | {
+                            (r2, c2)
+                            for c2 in col_set
+                            for r2 in range(n)
+                            if candidates[r2][c2] and board[r2][c2] not in union_colours
+                        }
+                        if not elim_cells:
+                            continue
+                        for r2, c2 in elim_cells:
+                            eliminate(r2, c2, trace=False)
+
+                        rows_str = ",".join(row_str(r2) for r2 in sorted(row_set))
+                        cols_str = ",".join(col_str(c2) for c2 in sorted(col_set))
+                        label = "{" + ",".join(sorted(union_colours)) + "}"
+                        out(
+                            f"  y-wing (forced intersection): size {target} "
+                            f"(locked={locked}) {label} confined to rows {{{rows_str}}} "
+                            f"∪ cols {{{cols_str}}} → {len(elim_cells)} cell(s) eliminated"
+                        )
+                        return True
+        return False
+
+    # ------------------------------------------------------------------
+    # Simulation helpers — shared by rules 5–9
     # ------------------------------------------------------------------
 
     def _sim_place(sc: list[list[bool]], sq: dict[int, int], r_t: int, c_t: int) -> None:
@@ -1015,6 +1158,8 @@ def solve_stepwise(
         rule_shadow,
         rule_n_group,
         rule_x_wing,
+        rule_y_wing_isolated_union,
+        rule_y_wing_forced_intersections,
         rule_elimination,
         rule_lookahead,
         rule_search,
