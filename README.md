@@ -115,12 +115,12 @@ All $|R|$ rows and all $|C|$ columns will be claimed by these $k$ colours. There
 
 | $k$ | `R` | `C` | Shape | Elimination effect | Note |
 |-|-|-|-|-|-|
-| 2 | 1 | 1 | 1 row, 1 col | Non-colours eliminated from lines; group colours from the intersection | This overlaps the region forced row/col rule |
-| 3 | 1 | 2 | 1 row, 2 cols | Non-colours eliminated from lines; group colours from intersections | True X-Wing starts at k=3 |
-| 3 | 2 | 1 | 2 rows, 1 col | Non-colours eliminated from lines; group colours from intersections | |
+| 2 | 1 | 1 | 1 row, 1 col | Non-colours eliminated from lines; colours also grouped from the intersection | This overlaps the region forced row/col rule |
+| 3 | 1 | 2 | 1 row, 2 cols | Non-colours eliminated from lines; colours also grouped from intersections | True X-Wing starts at k=3 |
+| 3 | 2 | 1 | 2 rows, 1 col | Non-colours eliminated from lines; colours also grouped from intersections | |
 | 4 | 2 | 2 | 2 rows, 2 cols (cross) | Non-colours eliminated from lines; all 4 colours _also eliminated from crossing-points_ | **Classic X-Wing (cross/#)** |
-| ≥4 | ≥2 | ≥2 | R rows, C cols (cross) | Non-colours eliminated from lines; all k _also eliminated from crossing-points_ | Larger shapes, with crossing-point elimination|
-| ≥4 | 1 or k–1 | k–1 or 1 | 1 row, k–1 cols (or vice versa) | Non-colours eliminated from lines; group colours from intersections | Larger shapes |
+| ≥4 | ≥2 | ≥2 | R rows, C cols (cross) | Non-colours eliminated from lines; all k colours _also eliminated from crossing-points_ | Larger shapes |
+| ≥4 | 1 or k–1 | k–1 or 1 | 1 row, k–1 cols (or vice versa) | Non-colours eliminated from lines; all k colours also eliminated from crossing-points | Larger shapes; degenerate 1×(k–1) "cross" |
 
 **Generalisation for $k \geq 4$:**
 - If $k$ colours are confined to $|R|$ rows and $|C|$ columns with $|R| + |C| = k$:
