@@ -34,9 +34,7 @@ Rule names are based upon (and extend) https://www.caterbum.com/blog/linkedin-qu
       a=b=2 (two pairs of colours forming a cross pattern).
   7. **Y-Wing** — a generalised X-Wing that accounts for queens forced into
       row/column intersections.
-  8. **Elimination** — if placing a queen at a candidate cell would leave
-      some other region with no remaining candidates at all, that cell is
-      ruled out (one-step lookahead).
+  8. **Elimination** - this rule is now removed as it was not used in any puzzle level.
   9. **Lookahead** — starting with smaller regions, trial-place a queen in every
       candidate cell; remove any candidate that leads to a contradiction.
   10. **Search** — last resort: pick the most-constrained region, guess,
@@ -1027,28 +1025,6 @@ def solve_stepwise(
 
 
     # ------------------------------------------------------------------
-    # Rule — Elimination
-    # ------------------------------------------------------------------
-
-    def rule_elimination() -> bool:
-        """Eliminate if placement immediately strands another region (no propagation)."""
-        for colour in colours:
-            if colour_is_solved(colour):
-                continue
-            for r, c in active_for_colour(colour):
-                sc = [row[:] for row in candidates]
-                sq = dict(queens)
-                _sim_place(sc, sq, r, c)
-                for colour2 in colours:
-                    if colour2 == colour or _sim_solved(sq, colour2):
-                        continue
-                    if not _sim_active(sc, sq, colour2):
-                        eliminate(r, c, trace=False)
-                        out(f"  eliminate: {row_col_str(r, c)} [{colour}]: immediately strands [{colour2}] → 1 cell eliminated") # updated
-                        return True
-        return False
-
-    # ------------------------------------------------------------------
     # Rule — Lookahead
     # ------------------------------------------------------------------
 
@@ -1160,7 +1136,6 @@ def solve_stepwise(
         rule_x_wing,
         rule_y_wing_isolated_union,
         rule_y_wing_forced_intersections,
-        rule_elimination,
         rule_lookahead,
         rule_search,
     ]

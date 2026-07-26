@@ -95,7 +95,7 @@ Ten rules are applied in order of increasing cost:
 5. **N-group** — k regions whose candidates are confined to k rows/cols; reserve those lines.
 6. **X-Wing** — c colours whose candidates fit within a rows + b columns (a+b=c); scan sizes 2 upward, apply the first valid hit found, then return to other rules.
 7. **Y-Wing** — a generalised X-Wing that uses colours forced into row/column intersections; see [y-wing.md](y-wing.md).
-8. **Elimination** — placing a queen at a candidate leaves another region empty; rule it out.
+8. **Elimination** — _this rule is removed as it was not used in any puzzle level_.
 9. **Lookahead** — trial-place a queen in every candidate of a colour; by default stop after the first contradictory colour. With `--lookahead-max-cands N`, consider all colours with ≤ N candidates in the same pass.
 10. **Search** — last resort: pick the most-constrained region, guess, and backtrack.
 
