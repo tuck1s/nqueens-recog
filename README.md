@@ -119,7 +119,7 @@ All $|R|$ rows and all $|C|$ columns will be claimed by these $k$ colours. There
 | 3 | 1 | 2 | 1 row, 2 cols | Non-colours eliminated from lines; colours also grouped from intersections | True X-Wing starts at k=3 |
 | 3 | 2 | 1 | 2 rows, 1 col | Non-colours eliminated from lines; colours also grouped from intersections | |
 | 4 | 2 | 2 | 2 rows, 2 cols (cross) | Non-colours eliminated from lines; all 4 colours _also eliminated from crossing-points_ | **Classic X-Wing (cross/#)** |
-| ≥4 | ≥2 | ≥2 | R rows, C cols (cross) | Non-colours eliminated from lines; all k colours _also eliminated from crossing-points_ | Larger shapes |
+| ≥4 | ≥1 | ≥1 | R rows, C cols (cross) | Non-colours eliminated from lines; all k colours _also eliminated from crossing-points_ | Larger shapes |
 
 **Generalisation for $k \geq 4$:**
 - If $k$ colours are confined to $|R|$ rows and $|C|$ columns with $|R| + |C| = k$:
